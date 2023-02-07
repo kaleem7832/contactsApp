@@ -11,7 +11,7 @@ contactRouter.use(bodyParser.json());
 contactRouter
   .route("/")
   .get((req, res, next) => {
-    const { start, size, filters, sorting, globalFilter } = req.query;
+    const { start, size, filters, globalFilter } = req.query;
 
     Contacts.find({
       $or: [
@@ -20,7 +20,8 @@ contactRouter
         { email: { $regex: globalFilter } },
         { country: { $regex: globalFilter } },
         { company: { $regex: globalFilter } },
-        { city: { $regex: globalFilter } },
+        { industry: { $regex: globalFilter } },
+        { size: { $regex: globalFilter } },
         { phone: { $regex: globalFilter } },
       ],
     })
