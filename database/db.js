@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 // const db=config.get('mongoURI');
 
 //**PROTECT CREDS WITH THIS .ENV INSTEAD OF BRADS' DEFAULTJSON
-const MONGO_URI =
-  "mongodb+srv://kaleem:1234@cluster0.8kszcwb.mongodb.net/panel?retryWrites=true&w=majority";
+const MONGO_URI = "mongodb+srv://kaleem:<password>@cluster0.egghxjo.mongodb.net/panel";
+  //"mongodb+srv://kaleem:1234@cluster0.8kszcwb.mongodb.net/panel?retryWrites=true&w=majority";
 
 const connectDB = async () => {
   try {
